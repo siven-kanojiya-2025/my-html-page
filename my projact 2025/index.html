@@ -1,0 +1,30 @@
+<!-- Hero Video Section -->
+<section class="relative h-screen w-full overflow-hidden" id="home">
+  <video 
+    class="absolute top-0 left-0 w-full h-full object-cover"
+    autoplay 
+    muted 
+    loop 
+    playsinline>
+    <source src="https://videos.pexels.com/video-files/5674718/5674718-uhd_2732_1440_30fps.mp4" type="video/mp4"id="video-hero">
+    <style>
+      video-hero{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="relative z-10 flex items-center justify-center h-full bg-black bg-opacity-50">
+    <div class="text-center text-white animate-fadeIn px-4">
+      <h1 class="text-5xl font-bold mb-4">Welcome to Kismati Tailor</h1>
+      <p class="text-xl mb-6">Elegance, precision, and timeless style — stitched just for you.</p>
+      <a href="#gallery" class="bg-[var(--accent)] text-[var(--primary)] px-6 py-3 rounded hover:bg-yellow-400 transition">Explore Designs</a>
+    </div>
+  </div>
+</section>
