@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kismati Tailor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Premium Color Scheme */
+        :root {
+            --primary: #1E3A8A; /* Deep Navy */
+            --accent: #D4AF37; /* Rich Gold */
+            --cream: #F5F5F4; /* Elegant Cream */
+        }
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Hover Effects */
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-[var(--cream)] font-sans">
+    <!-- Header -->
+    <header class="bg-[var(--primary)] text-white sticky top-0 z-10 shadow-md">
+        <nav class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold">Kismati's Tailor</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-[var(--accent)]">Home</a></li>
+                <li><a href="#about" class="hover:text-[var(--accent)]">About</a></li>
+                <li><a href="#services" class="hover:text-[var(--accent)]">Services</a></li>
+                <li><a href="#gallery" class="hover:text-[var(--accent)]">Gallery</a></li>
+                <li><a href="#testimonials" class="hover:text-[var(--accent)]">Testimonials</a></li>
+                <li><a href="#faq" class="hover:text-[var(--accent)]">FAQ</a></li>
+                <li><a href="#cart" class="hover:text-[var(--accent)]">Cart</a></li>
+                <li><a href="#contact" class="hover:text-[var(--accent)]">Contact</a></li>
+                <li><button id="loginBtn" class="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded hover:bg-yellow-400">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-[var(--cream)] py-20">
+        <div class="container mx-auto text-center animate-fadeIn">
+            <h2 class="text-5xl font-bold text-[var(--primary)] mb-4">Welcome to Kismati Tailor</h2>
+            <p class="text-xl text-gray-700 mb-6">Experience bespoke tailoring with unmatched craftsmanship and elegance.</p>
+            <a href="#orange" class="bg-[var(--accent)] text-[var(--primary)] px-6 py-3 rounded hover:bg-yellow-400">Explore Designs</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-[var(--primary)] text-center mb-8 animate-fadeIn">About Kismati Tailor</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 p-4">
+                    <img src="mom photo.jpg" style="border-radius: 500px;" alt="Tailor at Work" class="w-full h-64 object-cover rounded hover-scale">
+                </div>
+                <div class="md:w-1/2 p-4 animate-fadeIn">
+                    <p class="text-lg text-gray-700">Kismati Tailor is a family-run business with over 20 years of experience in crafting custom clothing.Kismati Tailor is a promising business offering personalized, high-quality tailoring with expert craftsmanship. Her experience ensures beautifully stitched garments that perfectly fit your style and needs. Led by our master tailor, we specialize in creating garments that reflect your unique style and personality. Our dedication to quality and attention to detail ensures every piece is a work of art.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-[var(--primary)] text-center mb-8 animate-fadeIn">Our Custom Designs</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[var(--cream)] p-4 rounded shadow hover:shadow-lg animate-fadeIn hover-scale">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VZ21_B6FpNwdpuN19DTv5N0xqUbOAiYlgQ&s" alt="Custom Blouse" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-[var(--primary)] mt-4">Designer Blouse</h3>
+                    <p class="text-gray-600">Rs450</p>
+                    <button class="add-to-cart bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded mt-4 hover:bg-yellow-400" data-item="Designer Blouse" data-price="50">Add to Cart</button>
+                </div>
+                <div class="bg-[var(--cream)] p-4 rounded shadow hover:shadow-lg animate-fadeIn hover-scale">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSCvmghFVVAknXitLuynhYVYzTWWi4vM5AnREoDGe5Oap2jJ4CUvquxRQjctRB13NDuRxkLJhWFYld7ivY4uezljjMcTmFVpxJfY9DzN55XAaBiKU9CxRBY_Q" alt="Custom Kurti" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-[var(--primary)] mt-4">Embroidered Kurti</h3>
+                    <p class="text-gray-600">$70</p>
+                    <button class="add-to-cart bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded mt-4 hover:bg-yellow-400" data-item="Embroidered Kurti" data-price="70">Add to Cart</button>
+                </div>
+                <div class="bg-[var(--cream)] p-4 rounded shadow hover:shadow-lg animate-fadeIn hover-scale">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQlUJ2qFWSmgnCvlvNbYsNGB_C1OOtnJA8IWNVkihqAT6r-WvEliVzsnsec8eAf929_ZEPxkmmE44j1SqyXTMrbeIjQqKUDW_EMLYUr1mYtPHVkPTzCd5OaZg" alt="Custom Saree" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-[var(--primary)] mt-4">Silk Saree</h3>
+                    <p class="text-gray-600">$150</p>
+                    <button class="add-to-cart bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded mt-4 hover:bg-yellow-400" data-item="Silk Saree" data-price="150">Add to Cart</button>
+                </div>
+                <div class="bg-[var(--cream)] p-4 rounded shadow hover:shadow-lg animate-fadeIn hover-scale">
+                    <img src="https://images.meesho.com/images/products/504394202/v6zp4_1200.jpg" alt="Custom Lehenga" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-[var(--primary)] mt-4">Bridal Lehenga</h3>
+                    <p class="text-gray-600">$400</p>
+                    <button class="add-to-cart bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded mt-4 hover:bg-yellow-400" data-item="Bridal Lehenga" data-price="400">Add to Cart</button>
+                </div>
+                <div class="bg-[var(--cream)] p-4 rounded shadow hover:shadow-lg animate-fadeIn hover-scale">
+                    <img src="https://images.biba.in/dw/image/v2/BKQK_PRD/on/demandware.static/-/Sites-biba-product-catalog/default/dw60dfc132/images/aw22/skdassorted8307aw22oldrose_1.jpg?sw=502&sh=753" alt="Custom Suit" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-[var(--primary)] mt-4">Classic Suit</h3>
+                    <p class="text-gray-600">$250</p>
+                    <button class="add-to-cart bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded mt-4 hover:bg-yellow-400" data-item="Classic Suit" data-price="250">Add to Cart</button>
+                </div>
+                <div class="bg-[var(--cream)] p-4 rounded shadow hover:shadow-lg animate-fadeIn hover-scale">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2021/1/QI/AT/GN/69868902/causal-shart.jpeg">
+                    <h3 class="text-xl font-semibold text-[var(--primary)] mt-4">Tailored Shirt</h3>
+                    <p class="text-gray-600">$80</p>
+                    <button class="add-to-cart bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded mt-4 hover:bg-yellow-400" data-item="Tailored Shirt" data-price="80">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-[var(--cream)]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-[var(--primary)] text-center mb-8 animate-fadeIn">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded shadow hover:shadow-lg animate-fadeIn">
+                    <p class="text-gray-600 italic">"Kismati Tailor created a stunning dress for my wedding. The attention to detail was impeccable!"</p>
+                    <p class="text-[var(--primary)] font-semibold mt-4">- Sarah M.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow hover:shadow-lg animate-fadeIn">
+                    <p class="text-gray-600 italic">"The custom suit I ordered fits perfectly and looks amazing. Highly recommend!"</p>
+                    <p class="text-[var(--primary)] font-semibold mt-4">- James R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-[var(--primary)] text-center mb-8 animate-fadeIn">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-[var(--cream)] p-6 rounded shadow animate-fadeIn">
+                    <h3 class="text-xl font-semibold text-[var(--primary)]">How long does it take to complete a custom order?</h3>
+                    <p class="text-gray-600">Most custom orders take 2-4 weeks, depending on the complexity of the design.</p>
+                </div>
+                <div class="bg-[var(--cream)] p-6 rounded shadow animate-fadeIn">
+                    <h3 class="text-xl font-semibold text-[var(--primary)]">Do you offer virtual consultations?</h3>
+                    <p class="text-gray-600">Yes, we provide virtual consultations to discuss your needs and measurements.</p>
+                </div>
+                <div class="bg-[var(--cream)] p-6 rounded shadow animate-fadeIn">
+                    <h3 class="text-xl font-semibold text-[var(--primary)]">What is your return policy?</h3>
+                    <p class="text-gray-600">Custom orders are non-returnable, but we offer alterations to ensure a perfect fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="py-16 bg-[var(--cream)]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-[var(--primary)] text-center mb-8 animate-fadeIn">Your Cart</h2>
+            <div id="cartItems" class="bg-white p-6 rounded shadow">
+                <p class="text-gray-600">Your cart is empty.</p>
+            </div>
+            <p id="cartTotal" class="text-xl font-semibold text-[var(--primary)] mt-4">Total: $0</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-[var(--primary)] mb-8 animate-fadeIn">Contact Us</h2>
+            <p class="text-lg text-gray-700 mb-4">Phone: +91 (7572906313)</p>
+            <p class="text-lg text-gray-700 mb-4">Email: kanojiaysiven258@gmail.com</p>
+            <p class="text-lg text-gray-700">Address: surat gujrat pin code number is (394221)</p>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded shadow-lg w-full max-w-md">
+            <h2 class="text-2xl font-bold text-[var(--primary)] mb-4">Login</h2>
+            <div>
+                <label class="block text-gray-700 mb-2">Username</label>
+                <input id="username" type="text" class="w-full p-2 border rounded mb-4" placeholder="Enter username">
+            </div>
+            <div>
+                <label class="block text-gray-700 mb-2">Password</label>
+                <input id="password" type="password" class="w-full p-2 border rounded mb-4" placeholder="Enter password">
+            </div>
+            <button id="submitLogin" class="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded hover:bg-yellow-400">Login</button>
+            <button id="closeModal" class="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 ml-2">Close</button>
+            <p id="loginMessage" class="text-red-500 mt-4 hidden">Invalid credentials!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--primary)] text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Kismati Tailor. All rights reserved.</p>
+            <p class="mt-2">Crafted with <span class="text-[var(--accent)]">♥</span> for elegance and style.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cart Functionality
+        let cart = [];
+        let total = 0;
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.getAttribute('data-item');
+                const price = parseFloat(button.getAttribute('data-price'));
+                cart.push({ item, price });
+                total += price;
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-gray-600">Your cart is empty.</p>';
+            } else {
+                cartItems.innerHTML = cart.map((item, index) => `
+                    <div class="flex justify-between items-center mb-2">
+                        <p>${item.item} - $${item.price}</p>
+                        <button class="text-red-500 remove-item" data-index="${index}">Remove</button>
+                    </div>
+                `).join('');
+            }
+            cartTotal.textContent = `Total: $${total}`;
+            // Add remove item functionality
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', () => {
+                    const index = button.getAttribute('data-index');
+                    total -= cart[index].price;
+                    cart.splice(index, 1);
+                    updateCart();
+                });
+            });
+        }
+
+        // Login Modal Functionality
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeModal = document.getElementById('closeModal');
+        const submitLogin = document.getElementById('submitLogin');
+        const loginMessage = document.getElementById('loginMessage');
+
+        loginBtn.addEventListener('click', () => {
+            loginModal.classList.remove('hidden');
+        });
+
+        closeModal.addEventListener('click', () => {
+            loginModal.classList.add('hidden');
+            loginMessage.classList.add('hidden');
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+        });
+
+        submitLogin.addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            // Simple validation (for demo purposes)
+            if (username === 'user' && password === 'pass') {
+                alert('Login successful!');
+                loginModal.classList.add('hidden');
+                loginBtn.textContent = 'Logout';
+                loginBtn.classList.add('bg-red-600', 'hover:bg-red-700');
+                loginBtn.classList.remove('bg-[var(--accent)]', 'text-[var(--primary)]', 'hover:bg-yellow-400');
+                loginBtn.onclick = () => {
+                    loginBtn.textContent = 'Login';
+                    loginBtn.classList.remove('bg-red-600', 'hover:bg-red-700');
+                    loginBtn.classList.add('bg-[var(--accent)]', 'text-[var(--primary)]', 'hover:bg-yellow-400');
+                };
+            } else {
+                loginMessage.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
